@@ -1,9 +1,7 @@
 <template>
     <div class="container" style="margin-top:100px;" >
         <div class="row">
-      
            <div class=" col-lg-4 col-md-4 col-sm-12  bg-light" style="height: 500px; overflow: scroll;" >
-            
                <!--<div class="header fixed-top p-2 " >
                  <h5>plan your house</h5>
                </div>-->
@@ -11,7 +9,7 @@
                 <div class="d-flex widthmenu ProductsWrapper  " >
                       <div  v-for="product in newstate" :key="product.id" @click="ShowOnWrapper1(product.id,product.img)">
                         <div class="wid " >
-                            <img  :src="product.img" />
+                            <img class="image1" :src="product.img" />
                                <div class="middle">
                                    <a class="text mt-4"  @click="showModal(product)"><b-icon icon="info-circle-fill"></b-icon></a>
                                   
@@ -25,10 +23,9 @@
                 <div class="d-flex widthmenu  ProductsWrapper " >
                <div v-for="product in showkitchen" :key="product.id" @click="ShowOnWrapper1(product.id,product.img)">
                        <div class="wid">
-                            <img  :src="product.img">
+                            <img class="image1"  :src="product.img">
                               <div class="middle" >
                                   <a class="text mt-4"  @click="showModal(product)"><b-icon icon="info-circle-fill"></b-icon></a>
-                                
                               </div>
                             <p class="text-center" > {{ product.title }}</p>
                                                         
@@ -40,7 +37,8 @@
             <div class="d-flex widthmenu ProductsWrapper " >
                <div v-for="product in showgolv" :key="product.id" @click="ShowOnWrapper1(product.id,product.img)">
                        <div class="wid " >
-                            <img  :src="product.img">
+                            <img class="image1"  :src="product.img">
+                          
                                 <div class="middle" >
                                         <div class="text" @click="showModal(product)"><b-icon icon="info-circle-fill"></b-icon></div>
                                       
@@ -54,9 +52,12 @@
           
         </div>
            </div>
-                    <modal v-show="isModalVisible"   :product="this.$store.state.product"  @close="closeModal" />
+              <modal v-show="isModalVisible"   :product="this.$store.state.product"  @close="closeModal" />
             <div id="wrapperInner1"  class="col-lg-8 col-md-8 col-sm-12 imginner  " >
-                    <img style="width:100%;height:100%;object-fit:cover" :src="backgroundImage" alt="">
+              <v-zoomer style="width: 100%; height: 100%; ">
+                      <img style="width:100%;height:100%; object-fit:cover"  :src="backgroundImage" alt="">
+              </v-zoomer>
+
             </div>
         <div>
   
@@ -144,7 +145,7 @@ export default {
 <style scoped>
 
 
-img{
+.image1{
   height: 125px;
   width: 125px;
 }

@@ -1,24 +1,26 @@
 <template>
-<div class="bg-warning fixed-top">
-  <div class="container">
-    <div class="row">
-       <div class="col-lg-4 mt-1 col-md-4 col-sm-12">
-           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWmG6CyjpFKw2ol_sO5Fsevm7Cy9C-e5M4Vw&usqp=CAU" style="width:40px; height:40px" alt="">
-            
-      </div>
-        <div  class=" col-lg-8 p-2 col-sm-12  col-md-8 d-flex   flex-row-reverse ">
-           <router-link to="/about" class="p-2 link text-white" >  <b-icon icon="cart4"  variant="danger" ></b-icon><span class="">{{ $store.state.cartCount }}</span></router-link>
-           <router-link to="/Order" class="p-2 link text-white
-             ">Order</router-link>
-           <router-link to="/" class="p-2 link text-white"> Home </router-link> 
-  
-             
-        </div>
-    </div>
-  </div>
+<div>
+ <b-navbar toggleable="lg" type="dark" class="fixed-top" variant="dark">
+    <div class="container">
+      <b-navbar-brand href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWmG6CyjpFKw2ol_sO5Fsevm7Cy9C-e5M4Vw&usqp=CAU" style="width:40px; height:40px" alt=""></b-navbar-brand>
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-</div>
+    <b-collapse id="nav-collapse" style="margin-left:75%" is-nav >
+    
+          <b-navbar-nav class="" style="" >
+            <b-nav-item href="#" ><router-link to="/" class="p-2 link text-white"> Home </router-link> 
+               </b-nav-item>
+                             <b-nav-item href="#" ><router-link to="/Order" class="p-2 link text-white
+                   ">Order</router-link></b-nav-item>
+              <b-nav-item href="#"> <router-link to="/about" class="p-2 link text-white" >  <b-icon icon="cart4"  variant="warning" ></b-icon><span class="">{{ $store.state.cartCount }}</span></router-link></b-nav-item>
+            </b-navbar-nav>
+    </b-collapse>
+    </div>
+    
+  </b-navbar>
   
+</div>
+
 </template>
 
 <script>

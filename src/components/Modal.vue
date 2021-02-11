@@ -29,9 +29,9 @@
         >
           <slot name="body" >
             <div class="contanier">
-               <div class="row" >
+               <div class="row mt-4" >
                     <div class="col-lg-6 col-md-6 col-sm-12">
-                            <img :src="product.img" style="width:300px ;height=300px" />
+                            <img :src="product.img" style="width:75% " />
 
                      </div>
                      <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
@@ -48,7 +48,7 @@
         </section>
         <footer class="modal-footer">
           <slot name="footer">
-            I'm the default footer!
+            
 
             <button
               type="button"
@@ -107,18 +107,18 @@ export default {
     
   }
 .modal {
+    overflow: scroll;
     background: #FFFFFF;
     box-shadow: 2px 2px 20px 1px;
     overflow-x: auto;
     display: flex;
     flex-direction: column;
     width: 70%;
-    height: 100%;
-    margin: auto;
-    /* float: none; */
-    position: absolute;
-    left: 0;
-    right: 0;
+    height: 70%;
+     position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
   .modal-header,

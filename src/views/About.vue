@@ -1,34 +1,29 @@
 <template>
   <div>
       <Header />
-      <div class="container" style="margin-top:80px;">
+      <div class="d-flex justify-content-center align-items-center mb-4 " style="height: 100vh;" >
      
-        <a class="" href="">
+        <!--<a class="" href="">
             Cart ({{ $store.state.cartCount }})
-        </a>
+        </a>-->
 
-        <div v-if="$store.state.cart.length > 0" class="">
-           
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-12">name</div>
-                <div class="col-lg-3 col-md-3 col-sm-12">quantity</div>
-                <div class="col-lg-3 col-md-3 col-sm-12">price</div>
-                <div class="col-lg-3 col-md-3 col-sm-12"></div>
-               
-               
-            </div>
+        <div v-if="$store.state.cart.length > 0"  class="bg-light" style="width:40%;height: 450px; overflow: scroll;">
+          
 
-              <div class="row navbar-item" v-for="item in $store.state.cart"
+              <div class="row navbar-item mb-4 justify-content-center" v-for="item in $store.state.cart"
                 :key="item.id"
-            
-       >   
-                     <div class="col-lg-3 col-md-3 col-sm-12">{{ item.title }} </div>
-                     <div class="col-lg-3 col-md-3 col-sm-12"> {{ item.quantity }}</div>
-                     <div class="col-lg-3 col-md-3 col-sm-12">${{ item.totalPrice }}</div>
-                     <div class="col-lg-3 col-md-3 col-sm-12">
-                               <b-icon icon="trash" aria-hidden="true" @click.prevent="removeFromCart(item)"></b-icon></div>
-
-             </div>
+                    
+                             >   
+                      <img :src="item.img" class="col-lg-6 col-md-6 bildcart col-sm-12"/>
+                      <div class="col-lg-4 col-md-4 col-sm-12 mb-4" style="display: flex;
+                             justify-content: center;
+                              align-items: center;"> 
+                            <div class="ml-2">{{ item.quantity }} * ${{ item.totalPrice }}</div>
+                             <b-icon icon="trash" aria-hidden="true"  @click.prevent="removeFromCart(item)" style="margin-left: 20px;" ></b-icon>
+                        
+                      </div>
+                    
+              </div>
             <hr class="navbar-divider">
              <div class="d-flex justify-content-between">
                     <div class="">    Total: ${{ totalPrice }}
@@ -85,12 +80,11 @@ export default {
 methods:{
   
        removeFromCart(item) {
- 
   const indexIten = this.$store.state.cart.indexOf(item);
     console.log(indexIten);
     if (indexIten > -1) {
       //let product =  this.$store.state.cart[indexIten];
-       //this.$store.state.cartCount -=  this.$store.state.product.quantity;
+       this.$store.state.cartCount -=  this.$store.state.product.quantity;
     this.$store.state.cart.splice(indexIten, 1);
 }
         //this.$store.commit('removeFromCart', item);
@@ -107,3 +101,9 @@ methods:{
 }
 }
 </script>
+<style scoped>
+.bildcart{
+  width:200px;
+  height: 200px;
+}
+</style>
