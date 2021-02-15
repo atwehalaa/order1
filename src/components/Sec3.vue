@@ -1,16 +1,16 @@
 <template>
 <div>
- <section class="w3l-index3" id="about">
+ <section class="index3" id="about">
     <div class="midd-w3 pb-5">
         <div class="container pb-lg-5 pb-md-4 pb-2">
             <div class="row">
                 <div class="col-lg-5 pr-lg-0">
-                    <div class="w3l-left-img">
+                    <div class="left-img">
                         
                     </div>
                 </div>
                 <div class="col-lg-7 pl-lg-0">
-                    <div class="w3l-right-info">
+                    <div class="right-info">
                         <h6 class="title-small">Who we are</h6>
                         <h3 class="title-big">The experts in local and international property</h3>
                         <p class="mt-4">We have over 15 year experience, Over 20,000 people work for us in more than 70
@@ -19,7 +19,7 @@
                         </p>
                         <p class="mt-3">Viverra feugiat. Pellen tesque libero ut justo,
                             ultrices in ligula. Semper at tempufddfel lorem ipsum.</p>
-                        <ul class="w3l-right-book w3l-right-book-grid mt-md-5 mt-4">
+                        <ul class="right-book right-book-grid mt-md-5 mt-4">
                             <li><span class="fa fa-check" aria-hidden="true"></span>Outstanding property</li>
                             <li><span class="fa fa-check" aria-hidden="true"></span>Social responsibility</li>
                             <li><span class="fa fa-check" aria-hidden="true"></span>Get expert advice</li>
@@ -71,12 +71,12 @@ export default {
 </script>
 
 <style>
-.w3l-index3 ul.w3l-right-book-grid {
+.index3 ul.right-book-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 0 20px; }
 
-.w3l-index3 ul.w3l-right-book li {
+.index3 ul.right-book li {
   margin-bottom: 10px;
   color: var(--font-color);
   font-size: 19px;
@@ -84,19 +84,19 @@ export default {
   font-weight: 400;
   list-style-type: none; }
 
-.w3l-index3 ul.w3l-right-book li span {
+.index3 ul.right-book li span {
   font-size: 12px;
   margin-right: 16px;
   opacity: 0.4; }
 
-.w3l-right-info {
+.right-info {
   background: var(--bg-color);
   padding: 80px 60px;
   border-top-right-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
   box-shadow: 0px 9px 24px 5px rgba(0, 0, 0, 0.04); }
 
-.w3l-left-img {
+.left-img {
   background: url(../assets/images/who.jpg) no-repeat center center;
   background-size: cover;
   position: relative;
@@ -104,7 +104,7 @@ export default {
   border-bottom-left-radius: var(--border-radius);
   height: 100%; }
 
-.w3l-left-img1 {
+.left-img1 {
   background: url(../assets/images/who1.jpg) no-repeat center center;
   background-size: cover;
   position: relative;
@@ -112,7 +112,7 @@ export default {
   border-bottom-left-radius: var(--border-radius);
   height: 100%; }
 
-.w3l-left-img2 {
+.left-img2 {
   background: url(../assets/images/about1.jpg) no-repeat center center;
   background-size: cover;
   position: relative;
@@ -121,28 +121,28 @@ export default {
   height: 100%; }
 
 @media (max-width: 991px) {
-  .w3l-left-img, .w3l-left-img1, .w3l-left-img2 {
+  .left-img, .left-img1, .left-img2 {
     height: 300px;
     border-radius: 0;
     border-top-right-radius: var(--border-radius);
     border-top-left-radius: var(--border-radius); } }
 
 @media (max-width: 736px) {
-  .w3l-right-info {
+  .right-info {
     padding: 60px 40px; }
-  .w3l-index3 ul.w3l-right-book li {
+  .index3 ul.right-book li {
     font-size: 17px; } }
 
 @media (max-width: 480px) {
-  .w3l-index3 ul.w3l-right-book-grid {
+  .index3 ul.right-book-grid {
     grid-template-columns: 1fr;
     grid-gap: 0 0px; }
-  .w3l-index3 ul.w3l-right-book li {
+  .index3 ul.right-book li {
     display: grid;
     grid-template-columns: auto 1fr; } }
 
 @media (max-width: 415px) {
-  .w3l-right-info {
+  .right-info {
     padding: 40px 20px; } }
 
 .w3l-bottom-grids {

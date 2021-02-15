@@ -8,7 +8,7 @@
         </a>-->
 
         <div v-if="$store.state.cart.length > 0"  class="bg-light" style="width:40%;height: 450px; overflow: scroll;">
-          
+          git st
 
               <div class="row navbar-item mb-4 justify-content-center" v-for="item in $store.state.cart"
                 :key="item.id"

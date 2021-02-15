@@ -1,14 +1,14 @@
 <template>
-  <section class="w3l-index3" id="about">
+  <section class="index3" id="about">
     <div class="midd-w3 py-5">
         <div class="container pb-lg-5 pb-md-4 pb-2">
             <div class="row">
                 <div class="col-lg-5 pr-lg-0">
-                    <div class="w3l-left-img1">
+                    <div class="left-img1">
                     </div>
                 </div>
                 <div class="col-lg-7 pl-lg-0">
-                    <div class="w3l-right-info">
+                    <div class="right-info">
                         <h6 class="title-small">Our clients</h6>
                         <div class="client-grid">
                             <div class="client-title">
@@ -20,7 +20,7 @@
                             </div>
                         </div>
 
-                        <div class="w3l-clients" id="testimonials">
+                        <div class="clients" id="testimonials">
                             <div id="owl-demo1" class="owl-carousel owl-theme mt-4 pt-2 mb-4">
                                 <div class="item">
                                     <div class="testimonial-content">
@@ -106,12 +106,12 @@ export default {
 </script>
 
 <style>
-.w3l-index3 ul.w3l-right-book-grid {
+.index3 ul.w3l-right-book-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 0 20px; }
 
-.w3l-index3 ul.w3l-right-book li {
+.index3 ul.w3l-right-book li {
   margin-bottom: 10px;
   color: var(--font-color);
   font-size: 19px;
@@ -119,12 +119,12 @@ export default {
   font-weight: 400;
   list-style-type: none; }
 
-.w3l-index3 ul.w3l-right-book li span {
+.index3 ul.w3l-right-book li span {
   font-size: 12px;
   margin-right: 16px;
   opacity: 0.4; }
 
-.w3l-right-info {
+.right-info {
   background: var(--bg-color);
   padding: 80px 60px;
   border-top-right-radius: var(--border-radius);
@@ -139,7 +139,7 @@ export default {
   border-bottom-left-radius: var(--border-radius);
   height: 100%; }
 
-.w3l-left-img1 {
+.left-img1 {
   background: url(../assets/images/who1.jpg) no-repeat center center;
   background-size: cover;
   position: relative;
@@ -156,28 +156,28 @@ export default {
   height: 100%; }
 
 @media (max-width: 991px) {
-  .w3l-left-img, .w3l-left-img1, .w3l-left-img2 {
+  .w3l-left-img, .left-img1, .w3l-left-img2 {
     height: 300px;
     border-radius: 0;
     border-top-right-radius: var(--border-radius);
     border-top-left-radius: var(--border-radius); } }
 
 @media (max-width: 736px) {
-  .w3l-right-info {
+  .right-info {
     padding: 60px 40px; }
-  .w3l-index3 ul.w3l-right-book li {
+  .index3 ul.w3l-right-book li {
     font-size: 17px; } }
 
 @media (max-width: 480px) {
-  .w3l-index3 ul.w3l-right-book-grid {
+  .index3 ul.w3l-right-book-grid {
     grid-template-columns: 1fr;
     grid-gap: 0 0px; }
-  .w3l-index3 ul.w3l-right-book li {
+  .index3 ul.w3l-right-book li {
     display: grid;
     grid-template-columns: auto 1fr; } }
 
 @media (max-width: 415px) {
-  .w3l-right-info {
+  .right-info {
     padding: 40px 20px; } }
 
 .w3l-bottom-grids {
@@ -633,11 +633,11 @@ h2.title {
   .breadcrumbs-custom-path {
     padding: 15px 0; } }
 
-.w3l-right-info h5 {
+.right-info h5 {
   font-size: 20px;
   line-height: 30px; }
 
-.w3l-right-info span.video-play-icon {
+.right-info span.video-play-icon {
   display: inline-block;
   width: 55px;
   height: 55px;
@@ -655,21 +655,21 @@ h2.title {
   border: 2px solid var(--primary-color);
   margin-right: 12px; }
 
-.w3l-right-info a.play-view {
+.right-info a.play-view {
   font-size: 18px;
   color: var(--heading-color);
   font-weight: 600; }
 
-.w3l-right-info a.play-view:hover {
+.right-info a.play-view:hover {
   color: var(--primary-color); }
 
 @media (max-width: 568px) {
-  .w3l-right-info h5 {
+  .right-info h5 {
     font-size: 18px;
     line-height: 28px; } }
 
 @media (max-width: 415px) {
-  .w3l-right-info a.play-view {
+  .right-info a.play-view {
     font-size: 16px; } }
 
 .area-box {
